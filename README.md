@@ -1,75 +1,38 @@
 # nomore.dev
 
-A personal portfolio website showcasing music, writing, code, and cover songs.
+my little corner of the internet. built it myself, broke it several times, fixed it eventually.
 
-## 📁 Project Structure
+it's a portfolio of sorts — music, code, writing, and other things i do instead of being productive.
 
-```
-.
-├── index.html              # Home page
-├── music.html              # Music section
-├── covers.html             # Covers collection
-├── code.html               # Code projects
-├── writing.html            # Writing collection
-├── css/                    # Stylesheets
-│   ├── main.css           # Global styles
-│   ├── index.css          # Home page styles
-│   ├── music.css          # Music page styles
-│   ├── covers.css         # Covers page styles
-│   ├── code.css           # Code page styles
-│   └── writing.css        # Writing page styles
-├── js/                    # JavaScript files
-│   ├── main.js
-│   ├── covers.js
-│   └── script.js
-├── images/                # Images & icons
-├── audios/                # Audio files
-├── package.json           # Project metadata & scripts
-├── vercel.json            # Vercel deployment config
-└── README.md              # This file
-```
+---
 
-## 🚀 Getting Started
+## what's here
 
-### Local Development
-```bash
-# Start a local development server
-npm run dev
-```
+**home** — who i am, what i do, why i exist (still figuring out the last one)
 
-### Build & Deploy
-```bash
-npm run build
-```
+**music** — my story with guitar and singing, covers i've recorded, songs i'm obsessed with
 
-The project is configured for automatic deployment on [Vercel](https://vercel.com).
+**code** — things i've built while procrastinating. mostly works.
 
-## 📝 Content Sections
+**writing** — poems and fiction i probably shouldn't have published but did anyway
 
-- **Home** - Introduction and overview
-- **Music** - Personal music story and performances
-- **Covers** - Collection of cover songs
-- **Code** - Software projects and code samples
-- **Writing** - Blog posts and written pieces
+---
 
-## 🔧 Technologies
+## the stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Static site (no backend)
+html, css, vanilla javascript. gsap for animations, lenis for smooth scroll.
+no frameworks. no build tools. just vibes and console.log debugging.
 
-## 📦 Deployment
+---
 
-This site is deployed on Vercel. Configuration is in `vercel.json`:
-- All HTML files are served as static content
-- Routes handle file serving correctly
+## about
 
-To deploy:
-1. Push to GitHub
-2. Connect repository to Vercel
-3. Vercel automatically builds and deploys on push
+i'm govind. 17. developer and musician, in whichever order the day demands.
+i play guitar, sing (people don't hate it), write code, and spend too much time
+finding music nobody around me has heard of.
 
-## 📄 License
+do first, think later.
 
-MIT License - feel free to use this as a template!
+---
+
+*built with love, caffeine, and an unhealthy number of vercel redeployments.*
