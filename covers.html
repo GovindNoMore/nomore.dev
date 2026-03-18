@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Covers — Govind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="covers.css">
+</head>
+<body>
+
+<div id="page-cover"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" data-trans>nomore.dev</a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li class="dropdown">
+        <a href="music.html" class="active" data-trans>Music</a>
+        <div class="dropdown-menu">
+          <a href="music.html" data-trans>My Story</a>
+          <a href="covers.html" class="active-sub" data-trans>Covers</a>
+        </div>
+      </li>
+      <li><a href="code.html" data-trans>Code</a></li>
+      <li><a href="writing.html" data-trans>Writing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="page-hero reveal">
+    <span class="eyebrow">Covers</span>
+    <h1 class="page-hero-title">hurting people's ears<br><em>since 2021.</em></h1>
+  </div>
+
+  <section class="player-section reveal">
+    <div class="player-card">
+      <div class="player-vinyl-col">
+        <div class="p-vinyl-wrap">
+          <div class="p-vinyl" id="vinyl-disc">
+            <div class="p-vinyl-grooves"></div>
+            <div class="p-vinyl-label">
+              <div class="p-vinyl-hole"></div>
+            </div>
+          </div>
+          <div class="p-arm">
+            <div class="p-arm-base"></div>
+            <div class="p-arm-rod" id="tonearm"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-info-col">
+        <div class="now-playing">
+          <span class="eyebrow">Now playing</span>
+          <h2 class="np-title" id="current-song">Select a track</h2>
+          <p class="np-artist" id="current-artist">Govind</p>
+        </div>
+
+        <div class="player-controls">
+          <button class="ctrl-btn" id="prev-btn" aria-label="Previous">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+          </button>
+          <button class="ctrl-btn ctrl-play" id="play-btn" aria-label="Play">
+            <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="ctrl-btn" id="next-btn" aria-label="Next">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-8.14 5.09 2.64L8 9.86zM16 6h2v12h-2z"/></svg>
+          </button>
+        </div>
+
+        <div class="progress-area">
+          <div class="progress-bar" id="progress-bar">
+            <div class="progress-fill" id="progress"></div>
+          </div>
+          <div class="time-row">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule reveal">
+
+  <section class="covers-list-section reveal">
+    <span class="eyebrow">Tracks</span>
+    <div class="covers-list" id="covers-list">
+
+      <div class="cover-row cover-card" data-song="0">
+        <span class="cover-num">01</span>
+        <div class="cover-row-info">
+          <span class="cover-row-title">No Surprises</span>
+          <span class="cover-row-artist">Radiohead</span>
+        </div>
+        <div class="cover-row-tags">
+          <span class="ctag">Acoustic</span>
+          <span class="ctag">Melancholic</span>
+        </div>
+        <div class="cover-play-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+
+      <div class="cover-row cover-card" data-song="1">
+        <span class="cover-num">02</span>
+        <div class="cover-row-info">
+          <span class="cover-row-title">Lovers Rock</span>
+          <span class="cover-row-artist">TV Girl</span>
+        </div>
+        <div class="cover-row-tags">
+          <span class="ctag">Chill</span>
+          <span class="ctag">Soothing</span>
+        </div>
+        <div class="cover-play-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+
+      <div class="cover-row cover-card" data-song="2">
+        <span class="cover-num">03</span>
+        <div class="cover-row-info">
+          <span class="cover-row-title">City of Stars</span>
+          <span class="cover-row-artist">Ryan Gosling</span>
+        </div>
+        <div class="cover-row-tags">
+          <span class="ctag">Soothing</span>
+          <span class="ctag">Acoustic</span>
+        </div>
+        <div class="cover-play-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+
+      <div class="cover-row cover-card" data-song="3">
+        <span class="cover-num">04</span>
+        <div class="cover-row-info">
+          <span class="cover-row-title">Remember You</span>
+          <span class="cover-row-artist">Adventure Time</span>
+        </div>
+        <div class="cover-row-tags">
+          <span class="ctag">Nostalgic</span>
+          <span class="ctag">Raw</span>
+        </div>
+        <div class="cover-play-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+
+      <!-- Cover 4 -->
+<div class="cover-row cover-card" data-song="4">
+  <span class="cover-num">05</span>
+  <div class="cover-row-info">
+    <span class="cover-row-title">I Love You So</span>
+    <span class="cover-row-artist">The Walters</span>
+  </div>
+  <div class="cover-row-tags">
+    <span class="ctag">Soft</span>
+    <span class="ctag">Romantic</span>
+  </div>
+  <div class="cover-play-icon">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  </div>
+</div>
+
+<!-- Cover 5 -->
+<div class="cover-row cover-card" data-song="5">
+  <span class="cover-num">06</span>
+  <div class="cover-row-info">
+    <span class="cover-row-title">Moon Song</span>
+    <span class="cover-row-artist">Karen O</span>
+  </div>
+  <div class="cover-row-tags">
+    <span class="ctag">Acoustic</span>
+    <span class="ctag">Tender</span>
+  </div>
+  <div class="cover-play-icon">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  </div>
+</div>
+
+<!-- Cover 6 -->
+<div class="cover-row cover-card" data-song="6">
+  <span class="cover-num">07</span>
+  <div class="cover-row-info">
+    <span class="cover-row-title">The Night We Met</span>
+    <span class="cover-row-artist">Lord Huron</span>
+  </div>
+  <div class="cover-row-tags">
+    <span class="ctag">Melancholic</span>
+    <span class="ctag">Raw</span>
+  </div>
+  <div class="cover-play-icon">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  </div>
+</div>
+
+<!-- Cover 7 -->
+<div class="cover-row cover-card" data-song="7">
+  <span class="cover-num">08</span>
+  <div class="cover-row-info">
+    <span class="cover-row-title">How to Disappear Completely</span>
+    <span class="cover-row-artist">Radiohead</span>
+  </div>
+  <div class="cover-row-tags">
+    <span class="ctag">Atmospheric</span>
+    <span class="ctag">Slow</span>
+  </div>
+  <div class="cover-play-icon">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <hr class="rule reveal">
+
+  <section class="setup-section reveal">
+    <span class="eyebrow">Setup</span>
+    <div class="setup-list">
+      <div class="setup-row reveal" data-delay="0">
+        <span class="setup-label">Guitar</span>
+        <span class="setup-val">Some cheap one but I love it sm (it works, okay?)</span>
+      </div>
+      <div class="setup-row reveal" data-delay="0.06">
+        <span class="setup-label">Microphone</span>
+        <span class="setup-val">My phone's built-in mic — the true audiophile experience</span>
+      </div>
+      <div class="setup-row reveal" data-delay="0.12">
+        <span class="setup-label">Software</span>
+        <span class="setup-val">Whatever free app doesn't crash every 5 minutes</span>
+      </div>
+      <div class="setup-row reveal" data-delay="0.18">
+        <span class="setup-label">Studio</span>
+        <span class="setup-val">My bedroom at 2 AM — optimal for disturbing neighbors</span>
+      </div>
+    </div>
+  </section>
+
+  <blockquote class="covers-quote reveal">
+    <p>"I may not have the voice of an angel, but at least I have the voice of... something."</p>
+    <cite>— Me, being realistic</cite>
+  </blockquote>
+
+</div>
+
+<audio id="audio-player" preload="metadata"></audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>gsap.registerPlugin(ScrollTrigger);</script>
+<script src="main.js"></script>
+<script src="covers.js"></script>
+</body>
+</html>

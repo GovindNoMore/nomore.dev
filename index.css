@@ -1,0 +1,101 @@
+.home-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 3rem 0 3.5rem;
+  border-bottom: 1.5px solid var(--border-2);
+  position: relative;
+}
+
+.home-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -2.5rem; right: -2.5rem;
+  height: 3px;
+  background: var(--accent);
+}
+
+.home-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -2.5rem; right: -2.5rem;
+  background: var(--bg-section);
+  z-index: -1;
+}
+
+.home-header-text { flex: 1; max-width: 560px; }
+
+.home-title {
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+}
+
+.home-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.home-sub {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  line-height: 1.9;
+  margin-bottom: 2rem;
+}
+
+.home-sub-em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--accent);
+  display: block;
+  margin-top: 0.4rem;
+}
+
+/* Social icons */
+.social-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+.social-link {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border: 1.5px solid var(--border-2);
+  border-radius: 3px;
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color 0.25s, border-color 0.25s, background 0.25s, transform 0.25s;
+  background: var(--bg-section);
+}
+
+.social-link:hover {
+  color: var(--ink); border-color: var(--accent);
+  background: var(--bg-card); transform: translateY(-3px);
+}
+
+/* Profile image — taller, better crop */
+.profile-wrap {
+  width: 320px !important;
+  height: 400px !important;
+}
+
+/* Terminal section */
+.about-terminal { max-width: 100%; }
+
+/* Gallery */
+.gallery-section { margin-top: 0.5rem; }
+.gallery-section .eyebrow { margin-bottom: 1rem; }
+
+@media (max-width: 900px) {
+  .home-header { flex-direction: column-reverse; align-items: center; gap: 2rem; padding: 2rem 0 2.5rem; text-align: center; }
+  .home-header-text { max-width: 100%; }
+  .home-sub { text-align: left; }
+  .social-row { justify-content: center; }
+  .home-title { font-size: 3rem; }
+  .profile-wrap { width: 260px !important; height: 320px !important; }
+}

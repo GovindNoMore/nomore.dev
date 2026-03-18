@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Writing — Govind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="writing.css">
+</head>
+<body>
+
+<div id="page-cover"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" data-trans>nomore.dev</a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li class="dropdown">
+        <a href="music.html" data-trans>Music</a>
+        <div class="dropdown-menu">
+          <a href="music.html" data-trans>My Story</a>
+          <a href="covers.html" data-trans>Covers</a>
+        </div>
+      </li>
+      <li><a href="code.html" data-trans>Code</a></li>
+      <li><a href="writing.html" class="active" data-trans>Writing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="page-hero reveal">
+    <span class="eyebrow">Writing</span>
+    <h1 class="page-hero-title">Poems, fiction,<br><em>and other confessions.</em></h1>
+    <p class="page-hero-sub">things I probably shouldn't publish</p>
+  </div>
+
+  <div class="filter-row reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="poem">Poems</button>
+    <button class="filter-btn" data-filter="fiction">Fiction</button>
+  </div>
+
+  <div class="writing-list" id="writing-list">
+
+    <article class="writing-row reveal" data-type="poem" data-delay="0">
+      <div class="wr-meta">
+        <span class="wr-type poem-type">Poem</span>
+        <span class="wr-year">2025</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">snow, death and happiness</h3>
+        <p class="wr-excerpt">The snow falling blissfully, / The cold breath is getting colder each moment, / The white floor is starting to get red slowly...</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('snow')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="fiction" data-delay="0.06">
+      <div class="wr-meta">
+        <span class="wr-type fiction-type">Fiction</span>
+        <span class="wr-year">2025</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">Connor and Diana</h3>
+        <p class="wr-excerpt">Many of my friends were killed today. I just couldn't leave you alone. I'm sorry, I was a coward...</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('connor')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="poem" data-delay="0.12">
+      <div class="wr-meta">
+        <span class="wr-type poem-type">Poem</span>
+        <span class="wr-year">2025</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">She was magical</h3>
+        <p class="wr-excerpt">her voice was like the pure, cold, icy water falling from a waterfall, her mere presence was nurturing and positive...</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('magical')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="poem" data-delay="0.18">
+      <div class="wr-meta">
+        <span class="wr-type poem-type">Poem</span>
+        <span class="wr-year">2025</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">they left quietly</h3>
+        <p class="wr-excerpt">they left, / silently, / slipping through the narrow passage, / they're gone now...</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('left')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="poem" data-delay="0.24">
+      <div class="wr-meta">
+        <span class="wr-type poem-type">Poem</span>
+        <span class="wr-year">2025</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">i've had several funerals</h3>
+        <p class="wr-excerpt">I've had several funerals — some ceremonial, some sad, some even celebratory. But most were quiet, private, stoic...</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('funerals')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="poem" data-delay="0.3">
+      <div class="wr-meta">
+        <span class="wr-type poem-type">Poem</span>
+        <span class="wr-year">2025</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">The Grief</h3>
+        <p class="wr-excerpt">The adobe that was flooded with tears a moon ago, is turning back to a chattered dwelling...</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('grief')">Read</button>
+    </article>
+
+  </div>
+</div>
+
+<!-- Modals -->
+<div class="modal-overlay" id="modal-snow" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type poem-type">Poem</span>
+        <h2 class="modal-title">snow, death and happiness</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('snow')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content">
+      <p>The snow falling blissfully,<br>The cold breath is getting colder each moment,<br>The white floor is starting to get red slowly,<br>There is a quiet and almost serene transition,<br>from unbearable pain to peace,<br>The tangled life is untangling itself,<br>The memory rushes to every corner of the brain,<br>accepting the new path,<br>The man lay down happily,<br>hoping he will be happy one day.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-connor" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type fiction-type">Fiction</span>
+        <h2 class="modal-title">Connor and Diana</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('connor')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content letter-content">
+      <p>24 September 1939</p>
+      <br>
+      <p>Dear Diana,</p>
+      <br>
+      <p>Many of my friends were killed today. They died fighting them. They all tried to stop the enemy, but it wasn't enough. I tried too, I swear to God I did, but they terrified me. Every time I looked at them, I thought of you, Diana.</p>
+      <br>
+      <p>I just couldn't leave you alone. I'm sorry, I was a coward. My family thinks I died alongside my friends; nobody knows that I ran away. I may still be breathing, but inside, I'm as lifeless as that chicken hanging in the butcher's shop. I'm too afraid to come back now. I can't face the families of the soldiers who died saving me while I ran away like a coward. I just can't, Diana.</p>
+      <br>
+      <p>The purpose of this letter is to confess one last time: I love you. I always have, and I always will. I would've surely married you, but I wasn't brave enough. Today, I'm going to meet my friends again. I don't know if they'll accept me up there, but I can't bear living with myself any longer.</p>
+      <br>
+      <p>I don't know if this message will ever reach you, but if it does, don't let it weigh on your heart.</p>
+      <br>
+      <p>Your lover,<br>Connor</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-magical" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type poem-type">Poem</span>
+        <h2 class="modal-title">She was magical</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('magical')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content">
+      <p>her voice was like the pure, cold, icy water falling from a waterfall,<br>her mere presence was nurturing and positive,<br>She was like the feeling of wonder and happiness that a child has,<br>the one person you can trust, even with your eyes pulled out,<br>She was the one.<br>But my mom always says god calls the good person as soon as possible,<br>Although she is not here physically, the echoes of her laughter still keep me awake at night, and the flowery fragrance of her hair still sits here with me<br>And I don't want to leave them alone ever again.</p>
+      <div class="modal-note">this note was found in a serial killer's house next to his wife's dead body</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-left" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type poem-type">Poem</span>
+        <h2 class="modal-title">they left quietly</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('left')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content">
+      <p>they left,<br>silently,<br>slipping through the narrow passage,<br>they're gone now,<br>what's left?<br>the flowers that used to bloom,<br>are now dull filled with darkness,<br>the mirrors are blind,<br>the tears are heavier than the eyes,<br>they all moved on,<br>but all i wanted was a goodbye.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-funerals" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type poem-type">Poem</span>
+        <h2 class="modal-title">i've had several funerals</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('funerals')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content">
+      <p>I've had several funerals<br>some ceremonial<br>some sad<br>some even celebratory<br>But most of them<br>were quiet, private, and stoic<br>There were no grand prayers and weeping<br>It was just someone refusing to recognize me anymore.<br>I died thousands of times,<br>from different ways, with diverse personalities and under various names.<br>And not a single person knows.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-grief" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type poem-type">Poem</span>
+        <h2 class="modal-title">The Grief</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('grief')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content">
+      <p>The Adobe that was flooded with tears a moon ago,<br>is turning back to a chattered dwelling.<br>It's not like they don't remember the reason for the crying,<br>It's just that they moved on, maybe a little too quickly<br>Some chose work to replace the emptiness<br>Some chose the few interim relations<br>And some just moved on<br>But some are still staring at the void<br>still thinking about all the things they could've done<br>But it's of no use, they too will soon move on<br>As life just moves on.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>gsap.registerPlugin(ScrollTrigger);</script>
+<script src="main.js"></script>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.writing-row').forEach(row => {
+        const show = f === 'all' || row.dataset.type === f;
+        gsap.to(row, { opacity: show ? 1 : 0.2, duration: 0.3 });
+        row.style.pointerEvents = show ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
