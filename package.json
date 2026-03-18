@@ -1,17 +1,4 @@
 {
   "name": "nomore-dev",
-  "version": "1.0.0",
-  "description": "A personal portfolio website",
-  "main": "index.html",
-  "scripts": {
-    "dev": "python -m http.server 3000"
-  },
-  "keywords": [
-    "portfolio",
-    "music",
-    "writing",
-    "code"
-  ],
-  "author": "Govind",
-  "license": "MIT"
+  "version": "1.0.0"
 }

@@ -148,6 +148,90 @@ nav {
 
 .page-hero-sub {
   font-family: var(--mono); font-size: 0.85rem;
+  color: var(--ink-2); margin-top: 0.5rem;
+}
+
+/* Music section toggle */
+.music-section-toggle {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.music-toggle-btn {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: 1.5px solid var(--border-2);
+  color: var(--ink-2);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.music-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.music-toggle-btn.active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+/* Footer */
+.footer {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1.5px solid var(--border-2);
+}
+
+.footer-content {
+  max-width: 800px;
+}
+
+.footer-content p {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+
+.footer-info {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-info a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-info a:hover {
+  color: var(--ink);
+}
+
+.footer-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 2rem 0;
+}
+
+.footer-credit {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
   color: var(--ink-3); margin-top: 0.8rem; font-style: italic;
 }
 

@@ -137,6 +137,8 @@ function openModal(id) {
     { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: 'power2.out' }
   );
   document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.width = '100%';
   lenis && lenis.stop();
 }
 
@@ -151,6 +153,8 @@ function closeModal(id) {
     onComplete: () => {
       overlay.style.display = 'none';
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
       lenis && lenis.start();
     }
   });
