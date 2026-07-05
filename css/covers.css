@@ -462,3 +462,13 @@ body.covers-page .player-card { border: 1px solid rgba(255,255,255,0.06) !import
 body.covers-page .p-vinyl-label, body.covers-page .p-vinyl-hole, body.covers-page .p-arm-base { border-color: #ffffff !important; }
 
 /* update todo status */
+
+/* Make eyebrow, time labels and play button/icon white */
+body.covers-page .eyebrow { color: #ffffff !important; }
+body.covers-page .time-row { color: #ffffff !important; }
+body.covers-page .ctrl-play {
+  background: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255,255,255,0.12) !important;
+  color: #ffffff !important;
+}
+body.covers-page .ctrl-play svg { fill: currentColor !important; }
