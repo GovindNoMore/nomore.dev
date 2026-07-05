@@ -1,5 +1,63 @@
 .page-hero-title em { font-style: italic; color: var(--accent); }
 
+/* Reuse music page background and overlay for covers */
+body.covers-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("../images/back.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: -3;
+}
+
+body.covers-page::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2,10,18,0.56), rgba(8,16,28,0.72));
+  z-index: -2;
+  pointer-events: none;
+}
+
+body.covers-page {
+  color: #f9fbff;
+  min-height: 100vh;
+}
+
+/* Navigation on covers page should be white */
+body.covers-page nav {
+  background: transparent;
+  border-bottom: none;
+}
+
+body.covers-page .nav-links a {
+  color: #ffffff;
+  opacity: 1;
+}
+
+body.covers-page .nav-links a::after {
+  background: rgba(255,255,255,0.7);
+}
+
+body.covers-page .nav-links a.active,
+body.covers-page .nav-links a:hover {
+  color: #ffffff;
+}
+
+/* Make main panels transparent and remove blurred glass effects */
+.player-card,
+.covers-list-section,
+.covers-quote,
+.setup-section {
+  background: transparent;
+  border-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
 /* Player card */
 .player-section { margin-bottom: 1rem; }
 
@@ -8,8 +66,8 @@
   grid-template-columns: auto 1fr;
   gap: 3rem;
   padding: 2.5rem;
-  background: var(--bg-section);
-  border: 1.5px solid var(--border-2);
+  background: transparent;
+  border: 1.5px solid transparent;
   border-radius: 4px;
   align-items: center;
 }
@@ -102,8 +160,8 @@
 
 .np-title {
   font-family: var(--serif);
-  font-size: 1.6rem;
-  color: var(--ink);
+  font-size: 2.4rem;
+  color: #ffffff;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0.3rem;
@@ -111,8 +169,8 @@
 
 .np-artist {
   font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--ink-3);
+  font-size: 1rem;
+  color: #e9f2ff;
   letter-spacing: 0.5px;
 }
 
@@ -199,7 +257,7 @@
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 0;
-  background: var(--bg-warm);
+  background: rgba(255,255,255,0.03);
   transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
   z-index: -1;
 }
@@ -213,9 +271,9 @@
 .cover-num {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 0.9rem;
-  color: var(--accent-lt);
-  width: 24px;
+  font-size: 1.05rem;
+  color: #ffffff;
+  width: 28px;
   flex-shrink: 0;
 }
 
@@ -228,15 +286,15 @@
 
 .cover-row-title {
   font-family: var(--mono);
-  font-size: 0.88rem;
-  color: var(--ink);
-  font-weight: 500;
+  font-size: 1.02rem;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .cover-row-artist {
   font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--ink-3);
+  font-size: 0.92rem;
+  color: #ffffff;
 }
 
 .cover-row-tags {
@@ -246,16 +304,16 @@
 
 .ctag {
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   letter-spacing: 0.5px;
-  color: var(--ink-3);
-  border: 1px solid var(--border);
-  padding: 1px 7px;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 2px 8px;
   border-radius: 2px;
 }
 
 .cover-play-icon {
-  color: var(--ink-3);
+  color: #ffffff;
   opacity: 0;
   transition: opacity 0.2s;
   display: flex;
@@ -263,7 +321,7 @@
 }
 
 .cover-row:hover .cover-play-icon,
-.cover-row.active .cover-play-icon { opacity: 1; color: var(--accent); }
+.cover-row.active .cover-play-icon { opacity: 1; color: #ffffff; }
 
 /* Setup section */
 .setup-section { max-width: 640px; }
@@ -297,7 +355,7 @@
 
 /* Quote */
 .covers-quote {
-  border-left: 2px solid var(--accent-lt);
+  border-left: 2px solid rgba(255,255,255,0.12);
   padding: 1rem 0 1rem 1.5rem;
   max-width: 540px;
   margin-top: 1rem;
@@ -307,7 +365,7 @@
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.1rem;
-  color: var(--ink-2);
+  color: #ffffff;
   line-height: 1.5;
   margin-bottom: 0.4rem;
 }
@@ -315,7 +373,7 @@
 .covers-quote cite {
   font-family: var(--mono);
   font-size: 0.73rem;
-  color: var(--ink-3);
+  color: #f3f6f9;
   font-style: normal;
 }
 
