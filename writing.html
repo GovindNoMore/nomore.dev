@@ -35,6 +35,7 @@
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="poem">Poems</button>
     <button class="filter-btn" data-filter="fiction">Fiction</button>
+    <button class="filter-btn" data-filter="diary">Diary</button>
   </div>
 
   <div class="writing-list" id="writing-list">
@@ -75,18 +76,6 @@
       <button class="wr-read-btn" onclick="openModal('magical')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="poem" data-delay="0.18">
-      <div class="wr-meta">
-        <span class="wr-type poem-type">Poem</span>
-        <span class="wr-year">2025</span>
-      </div>
-      <div class="wr-body">
-        <h3 class="wr-title">they left quietly</h3>
-        <p class="wr-excerpt">they left, / silently, / slipping through the narrow passage, / they're gone now...</p>
-      </div>
-      <button class="wr-read-btn" onclick="openModal('left')">Read</button>
-    </article>
-
     <article class="writing-row reveal" data-type="poem" data-delay="0.24">
       <div class="wr-meta">
         <span class="wr-type poem-type">Poem</span>
@@ -99,39 +88,70 @@
       <button class="wr-read-btn" onclick="openModal('funerals')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="poem" data-delay="0.3">
+    <article class="writing-row reveal" data-type="diary" data-delay="0.36">
       <div class="wr-meta">
-        <span class="wr-type poem-type">Poem</span>
-        <span class="wr-year">2025</span>
+        <span class="wr-type diary-type">Diary Entry</span>
+        <span class="wr-year">2026</span>
       </div>
       <div class="wr-body">
-        <h3 class="wr-title">The Grief</h3>
-        <p class="wr-excerpt">The adobe that was flooded with tears a moon ago, is turning back to a chattered dwelling...</p>
+        <h3 class="wr-title">Dear Diary</h3>
+        <p class="wr-excerpt">I wish to confess, to come clean, and to finally talk about something. I stutter.</p>
       </div>
-      <button class="wr-read-btn" onclick="openModal('grief')">Read</button>
+      <button class="wr-read-btn" onclick="openModal('diary')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="poem" data-delay="0.42">
+      <div class="wr-meta">
+        <span class="wr-type poem-type">Poem</span>
+        <span class="wr-year">2026</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">Every Scar</h3>
+        <p class="wr-excerpt">Every scar on my cold, dry face, holds a beautiful memory. They keep growing.</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('scar')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="poem" data-delay="0.48">
+      <div class="wr-meta">
+        <span class="wr-type poem-type">Poem</span>
+        <span class="wr-year">2026</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">Miranda</h3>
+        <p class="wr-excerpt">Cute, old, and very wise, with brown, cold, and distant eyes.</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('miranda')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="fiction" data-delay="0.54">
+      <div class="wr-meta">
+        <span class="wr-type fiction-type">Creative Nonfiction</span>
+        <span class="wr-year">2026</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">What the Monkeys Know</h3>
+        <p class="wr-excerpt">Evening. They are here, yet again. A family of many—uninvited, yet united.</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('monkeys')">Read</button>
+    </article>
+
+    <article class="writing-row reveal" data-type="poem" data-delay="0.6">
+      <div class="wr-meta">
+        <span class="wr-type poem-type">Poem</span>
+        <span class="wr-year">2026</span>
+      </div>
+      <div class="wr-body">
+        <h3 class="wr-title">Burial</h3>
+        <p class="wr-excerpt">I'll be burried free, in the hurried sea. a fish for dinner, the life of a winner.</p>
+      </div>
+      <button class="wr-read-btn" onclick="openModal('burial')">Read</button>
     </article>
 
   </div>
 </div>
 
 <!-- Modals -->
-<div class="modal-overlay" id="modal-snow" style="display:none">
-  <div class="modal-box">
-    <div class="modal-head">
-      <div>
-        <span class="wr-type poem-type">Poem</span>
-        <h2 class="modal-title">snow, death and happiness</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('snow')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <div class="modal-content">
-      <p>The snow falling blissfully,<br>The cold breath is getting colder each moment,<br>The white floor is starting to get red slowly,<br>There is a quiet and almost serene transition,<br>from unbearable pain to peace,<br>The tangled life is untangling itself,<br>The memory rushes to every corner of the brain,<br>accepting the new path,<br>The man lay down happily,<br>hoping he will be happy one day.</p>
-    </div>
-  </div>
-</div>
-
 <div class="modal-overlay" id="modal-connor" style="display:none">
   <div class="modal-box">
     <div class="modal-head">
@@ -179,23 +199,6 @@
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-left" style="display:none">
-  <div class="modal-box">
-    <div class="modal-head">
-      <div>
-        <span class="wr-type poem-type">Poem</span>
-        <h2 class="modal-title">they left quietly</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('left')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <div class="modal-content">
-      <p>they left,<br>silently,<br>slipping through the narrow passage,<br>they're gone now,<br>what's left?<br>the flowers that used to bloom,<br>are now dull filled with darkness,<br>the mirrors are blind,<br>the tears are heavier than the eyes,<br>they all moved on,<br>but all i wanted was a goodbye.</p>
-    </div>
-  </div>
-</div>
-
 <div class="modal-overlay" id="modal-funerals" style="display:none">
   <div class="modal-box">
     <div class="modal-head">
@@ -213,19 +216,130 @@
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-grief" style="display:none">
+<div class="modal-overlay" id="modal-diary" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type diary-type">Diary Entry</span>
+        <h2 class="modal-title">Dear Diary</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('diary')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content letter-content">
+      <p>17/05/2026</p>
+      <p>Sunday</p>
+      <br>
+      <p>Dear Diary,</p>
+      <br>
+      <p>I wish to confess, to come clean, and to finally talk about something.</p>
+      <br>
+      <p>I stutter.</p>
+      <br>
+      <p>I know exactly what I want to say. I have repeated the same words to myself several times. The people in front of me are eagerly waiting, their faces displaying a mix of emotions. Most are understanding and patient, some are impatient and eager to move on, and a few are laughing. When I see those few, I feel scared and angry—not at them, but at myself, at my unruly tongue and mind.</p>
+      <br>
+      <p>This has happened countless times. After each instance, my urge to speak, to tell my friends about my day, or even to answer a question, runs far away, to hide in the distant forest. I sometimes feel like one of the stranger creations of the one above. I think a lot, almost all the time, but I often choose not to give it those cruel words.</p>
+      <br>
+      <p>Maybe that’s why I like writing, on paper, on a screen, with my own comfort, no one in my head just shouting at me to speak clearly or quickly.</p>
+      <br>
+      <p>But recently, I’ve started to notice the people who were patient, who were understanding, who were with me through those weird pauses, who didn’t run away or make fun of me just because I spoke with a short delay.</p>
+      <br>
+      <p>And I know that I would be stuttering in the future too, and maybe I will always choose the ones who stayed, waited, and were kind enough to listen.</p>
+      <br>
+      <p>Thank you for being one of the few who stayed.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-scar" style="display:none">
   <div class="modal-box">
     <div class="modal-head">
       <div>
         <span class="wr-type poem-type">Poem</span>
-        <h2 class="modal-title">The Grief</h2>
+        <h2 class="modal-title">Every Scar</h2>
       </div>
-      <button class="modal-close" onclick="closeModal('grief')">
+      <button class="modal-close" onclick="closeModal('scar')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="modal-content">
-      <p>The Adobe that was flooded with tears a moon ago,<br>is turning back to a chattered dwelling.<br>It's not like they don't remember the reason for the crying,<br>It's just that they moved on, maybe a little too quickly<br>Some chose work to replace the emptiness<br>Some chose the few interim relations<br>And some just moved on<br>But some are still staring at the void<br>still thinking about all the things they could've done<br>But it's of no use, they too will soon move on<br>As life just moves on.</p>
+      <p>Every scar on my cold, dry face,<br>Holds a beautiful memory.<br>They keep growing.<br>Finding homes on the flaky skin,<br>Farming a yellowish fluid.<br>The colony is yet to arrive,<br>to my lips, eyes, and heart.</p>
+      <br>
+      <p>A Melancholic Coincidence:</p>
+      <br>
+      <p>A constellation forms above the pretty sky,<br>Each faded star falls in my backyard.<br>I collect those diverse bodies for show.<br>The showcase shelf paints a portrait,<br>Of a familiar face, I saw the day I died.</p>
+      <br>
+      <p>White Nights by Fyodor Dostoevsky, Starry Night by Vincent Van Gogh, Yeh Kagazi Phool Jaise Chehre by Mehdi Hassan, Pyaasa by Guru Dutt, and My Life.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-miranda" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type poem-type">Poem</span>
+        <h2 class="modal-title">Miranda</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('miranda')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content">
+      <p>Miranda<br>Cute, old, and very wise,<br>with brown, cold, and distant eyes.<br>She runs out of her small house,<br>trying to look for a little mouse.</p>
+      <br>
+      <p>A mouse, like a son,<br>a pretty, cute one.</p>
+      <br>
+      <p>Miranda<br>In a shining hot sun,<br>Having so much fun.<br>She walks her path,<br>like an otter for a bath.</p>
+      <br>
+      <p>Miranda<br>finally greets the moon,<br>hoping to find him soon.<br>But the mouse is lost,<br>fleeing as a ghost.</p>
+      <br>
+      <p>Miranda,<br>searches for her son,<br>a pretty, cute one.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-monkeys" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type fiction-type">Creative Nonfiction</span>
+        <h2 class="modal-title">What the Monkeys Know</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('monkeys')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content letter-content">
+      <p><strong>Evening.</strong><br>They are here, yet again. A family of many—uninvited, yet united. The young ones jump and wrestle the way we used to. A tired mother walks slowly, her baby hugging her upside down. The big ones are stoic and rude. They are familiar.</p>
+      <br>
+      <p><strong>Tuesday.</strong><br>I take off my chappal at the gate of the Hanuman Mandir. The continuous jingle of the temple bell, the thump of a worn-out tabla, and a melodious voice fill the air. I join the half-finished Chalisa, reciting along. The priest splashes a handful of cold water from his jug, then comes around and presses a bright orange chandan tika between my eyebrows. When I finally meet him—standing in all of his glory, carrying a mountain—he is, somehow, also kind.</p>
+      <br>
+      <p><strong>Vrindavan.</strong><br>A tourist's sunglasses disappear, now resting in the grasp of a small grey fist. Locals come in as translators, informing her about the huge demand for Frooti. She agrees. A man from the crowd throws the Frooti up into the air, and with perfect fairness, a pair of sunglasses comes down.</p>
+      <br>
+      <p><strong>Morning,</strong><br>every morning, for almost a month.<br>A grey and pink hand taps gently at my window. The curtain hides a child. He chatters as if he has something urgent to say. His tongue lolls out as soon as he sees the banana on my desk. I open the window—I always open the window. After a bit of small talk, he gets his breakfast.</p>
+      <br>
+      <p><strong>One day,</strong><br>He stopped coming.<br>My eyes were open, waiting to get up after that delicate knock.</p>
+      <br>
+      <p><strong>Yesterday.</strong><br>A big guy—one of the rude ones—on my balcony, in an unusual area. He barely moved, just sat there with his back to me. His back was bulky, with yellow hair poking out, some tangled, drawing an odd image. I watched him long enough that the image started to make sense. Then, abruptly, he moved on. I kept looking, hoping to catch a glimpse of his eyes.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-burial" style="display:none">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <span class="wr-type poem-type">Poem</span>
+        <h2 class="modal-title">Burial</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('burial')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content">
+      <p>I'll be burried free,<br>in the hurried sea.<br>a fish for dinner,<br>the life of a winner.<br>prayers in rune,<br>that I will sing for neptune.<br>a house in atlantis,<br>shallow as a mantis.<br>Lungs butchered and heart punctured,<br>I'll live nicely, well nurtured.</p>
     </div>
   </div>
 </div>
