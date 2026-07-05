@@ -47,6 +47,52 @@ body.covers-page .nav-links a:hover {
   color: #ffffff;
 }
 
+/* Neutralize remaining blue tones for covers page components */
+body.covers-page .p-vinyl-label {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+body.covers-page .p-vinyl-hole {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+body.covers-page .p-arm-base {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+body.covers-page .p-arm-rod {
+  background: rgba(255,255,255,0.14);
+}
+
+body.covers-page .ctrl-btn {
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #ffffff;
+}
+
+body.covers-page .ctrl-btn:hover { border-color: rgba(255,255,255,0.28); color: #ffffff; background: rgba(255,255,255,0.04); }
+
+body.covers-page .ctrl-play {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+  color: #0b0b0b;
+}
+
+body.covers-page .ctrl-play:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.18); }
+
+body.covers-page .progress-bar { background: rgba(255,255,255,0.08); }
+body.covers-page .time-row { color: #f3f6f9; }
+
+body.covers-page .cover-row { border-bottom: 1px solid rgba(255,255,255,0.06); }
+body.covers-page .cover-row.active { background: rgba(255,255,255,0.03); }
+
+body.covers-page .setup-row { border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+/* Override global rule divider for covers page */
+body.covers-page .rule { border-top-color: rgba(255,255,255,0.08); }
+
 /* Make main panels transparent and remove blurred glass effects */
 .player-card,
 .covers-list-section,
@@ -343,13 +389,13 @@ body.covers-page .nav-links a:hover {
   font-size: 0.75rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: #ffffff;
 }
 
 .setup-val {
   font-family: var(--mono);
   font-size: 0.83rem;
-  color: var(--ink-2);
+  color: #f3f6f9;
   line-height: 1.6;
 }
 
@@ -382,3 +428,37 @@ body.covers-page .nav-links a:hover {
   .cover-row-tags { display: none; }
   .setup-row { grid-template-columns: 1fr; gap: 0.2rem; }
 }
+
+/* Final overrides to ensure no blue tones remain on covers page */
+body.covers-page .p-vinyl-label {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+body.covers-page .p-vinyl-hole {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+body.covers-page .p-arm-base { background: rgba(255,255,255,0.08) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+body.covers-page .p-arm-rod { background: rgba(255,255,255,0.14) !important; }
+body.covers-page .ctrl-btn { border: 1px solid rgba(255,255,255,0.12) !important; color: #ffffff !important; }
+body.covers-page .ctrl-btn:hover { border-color: rgba(255,255,255,0.28) !important; color: #ffffff !important; background: rgba(255,255,255,0.04) !important; }
+body.covers-page .ctrl-play { background: rgba(255,255,255,0.06) !important; border-color: rgba(255,255,255,0.12) !important; color: #0b0b0b !important; }
+body.covers-page .ctrl-play:hover { background: rgba(255,255,255,0.12) !important; border-color: rgba(255,255,255,0.18) !important; }
+body.covers-page .progress-bar { background: rgba(255,255,255,0.08) !important; }
+body.covers-page .time-row { color: #f3f6f9 !important; }
+body.covers-page .cover-row { border-bottom: 1px solid rgba(255,255,255,0.06) !important; }
+body.covers-page .cover-row.active { background: rgba(255,255,255,0.03) !important; }
+body.covers-page .setup-row { border-bottom: 1px solid rgba(255,255,255,0.06) !important; }
+body.covers-page .rule { border-top-color: rgba(255,255,255,0.08) !important; }
+body.covers-page .np-artist { color: #ffffff !important; }
+
+/* Make dividers, thin borders and separators bright white for high contrast */
+body.covers-page .rule { border-top: 1px solid #ffffff !important; }
+body.covers-page .cover-row { border-bottom: 1px solid #ffffff !important; }
+body.covers-page .cover-row::before { background: rgba(255,255,255,0.04) !important; }
+body.covers-page .cover-row.active { background: rgba(255,255,255,0.05) !important; }
+body.covers-page .setup-row { border-bottom: 1px solid #ffffff !important; }
+body.covers-page .player-card { border: 1px solid rgba(255,255,255,0.06) !important; }
+body.covers-page .p-vinyl-label, body.covers-page .p-vinyl-hole, body.covers-page .p-arm-base { border-color: #ffffff !important; }
+
+/* update todo status */

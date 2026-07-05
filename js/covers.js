@@ -11,6 +11,11 @@ class CoverPlayer {
       { title: 'Moon song',     artist: 'Karen O',          file: 'audios/The moon song.m4a' },
       { title: 'The Night We Met', artist: 'Lord Huron',       file: 'audios/The night we met.m4a' },
       { title: 'how to disappear completely', artist: 'Radiohead',         file: 'audios/how to disappear completely.mp3' },
+      { title: 'Hey Jude', artist: 'The Beatles', file: 'audios/hey jude.mp3' },
+      { title: 'Jaago', artist: 'Lifafa', file: 'audios/jaago.m4a' },
+      { title: 'Main Tumhara', artist: 'Govind', file: 'audios/main tumhara.m4a' },
+      { title: 'Original', artist: 'My Song', file: 'audios/orignal.m4a' },
+      { title: 'Pause', artist: 'Prateek Kuhad', file: 'audios/pause.m4a' },
     ];
 
     this.audio    = document.getElementById('audio-player');
@@ -59,13 +64,18 @@ class CoverPlayer {
     });
     this.audio.addEventListener('ended', () => this.loadSong((this.idx + 1) % this.songs.length, true));
     this.vinyl.addEventListener('click', () => this.toggle());
+    // make cover rows clickable to load/play the associated track
+    document.querySelectorAll('.cover-card').forEach((el, i) => {
+      el.addEventListener('click', () => this.loadSong(i, true));
+    });
   }
 
   toggle() { this.playing ? this.pause() : this.play(); }
 
   play() {
     this.audio.play().then(() => this.setPlaying(true)).catch(err => {
-      this.titleEl.textContent = 'Unable to play — check audio files';
+      console.error('Audio play error:', err);
+      // Do not overwrite the displayed title — keep current now-playing info.
     });
   }
 
