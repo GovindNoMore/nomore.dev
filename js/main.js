@@ -1,6 +1,3 @@
-/* main.js — loaded on every page */
-
-/* ── Lenis smooth scroll ── */
 let lenis;
 
 function initLenis() {
@@ -20,10 +17,10 @@ function initLenis() {
   gsap.ticker.lagSmoothing(0);
 }
 
-/* ── Page transition ── */
 const cover = document.getElementById('page-cover');
 
 function pageIn() {
+  if (!cover) return;
   gsap.fromTo(cover,
     { scaleY: 1, transformOrigin: 'top' },
     { scaleY: 0, duration: 0.7, ease: 'power3.inOut', delay: 0.05 }
@@ -31,6 +28,10 @@ function pageIn() {
 }
 
 function pageOut(href) {
+  if (!cover) {
+    window.location.href = href;
+    return;
+  }
   lenis && lenis.stop();
   gsap.fromTo(cover,
     { scaleY: 0, transformOrigin: 'bottom' },
@@ -41,7 +42,6 @@ function pageOut(href) {
   );
 }
 
-/* ── Nav link intercept ── */
 function initNav() {
   document.querySelectorAll('a[data-trans]').forEach(link => {
     link.addEventListener('click', e => {
@@ -54,9 +54,8 @@ function initNav() {
   });
 }
 
-/* ── Scroll reveal ── */
 function initReveal() {
-  gsap.utils.toArray('.reveal').forEach((el, i) => {
+  gsap.utils.toArray('.reveal').forEach((el) => {
     gsap.fromTo(el,
       { opacity: 0, y: 36 },
       {
@@ -74,7 +73,6 @@ function initReveal() {
   });
 }
 
-/* ── Hero stagger (index only) ── */
 function initHeroStagger() {
   const items = document.querySelectorAll('.hero-stagger');
   if (!items.length) return;
@@ -90,7 +88,6 @@ function initHeroStagger() {
   );
 }
 
-/* ── Mouse-track tilt on gallery cards ── */
 function initTilt() {
   document.querySelectorAll('.gallery-item').forEach(card => {
     card.addEventListener('mousemove', e => {
@@ -111,7 +108,6 @@ function initTilt() {
   });
 }
 
-/* ── Vinyl spin control ── */
 function initVinylTilt() {
   const vinyl = document.getElementById('vinyl-disc');
   if (!vinyl) return;
@@ -126,36 +122,43 @@ function initVinylTilt() {
   });
 }
 
-/* ── Writing modal open/close ── */
 function openModal(id) {
   const overlay = document.getElementById('modal-' + id);
   if (!overlay) return;
+  
   overlay.style.display = 'flex';
-  gsap.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.3 });
-  gsap.fromTo(overlay.querySelector('.modal-box'),
-    { opacity: 0, y: 30, scale: 0.97 },
-    { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: 'power2.out' }
-  );
   document.body.style.overflow = 'hidden';
-  document.body.style.position = 'fixed';
-  document.body.style.width = '100%';
-  lenis && lenis.stop();
+  document.body.classList.add('reader-open');
+  
+  if (lenis) lenis.stop();
+  
+  gsap.fromTo(overlay, 
+    { opacity: 0 },
+    { opacity: 1, duration: 0.35, ease: 'power2.out' }
+  );
+  
+  gsap.fromTo(overlay.querySelector('.modal-box'),
+    { opacity: 0, y: 20, scale: 0.98 },
+    { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: 'power2.out', delay: 0.05 }
+  );
 }
 
 function closeModal(id) {
   const overlay = document.getElementById('modal-' + id);
   if (!overlay) return;
+  
   gsap.to(overlay.querySelector('.modal-box'),
-    { opacity: 0, y: 20, scale: 0.97, duration: 0.3, ease: 'power2.in' }
+    { opacity: 0, y: 15, scale: 0.98, duration: 0.25, ease: 'power2.in' }
   );
+  
   gsap.to(overlay, {
-    opacity: 0, duration: 0.35,
+    opacity: 0, duration: 0.3, ease: 'power2.in',
+    delay: 0.1,
     onComplete: () => {
       overlay.style.display = 'none';
       document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-      lenis && lenis.start();
+      document.body.classList.remove('reader-open');
+      if (lenis) lenis.start();
     }
   });
 }
@@ -163,12 +166,11 @@ function closeModal(id) {
 window.openModal  = openModal;
 window.closeModal = closeModal;
 
-/* ── Cover card border draw ── */
 function initCoverCards() {
   document.querySelectorAll('.cover-card[data-song]').forEach(card => {
-    card.addEventListener('click', e => {
+    card.addEventListener('click', () => {
       const idx = parseInt(card.dataset.song);
-      if (window.player) {
+      if (window.player && typeof window.player.loadSong === 'function') {
         window.player.loadSong(idx);
         window.player.play();
       }
@@ -176,17 +178,43 @@ function initCoverCards() {
   });
 }
 
-/* ── Escape key closes modals ── */
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay[style*="flex"]').forEach(m => {
-      const id = m.id.replace('modal-', '');
+    const visibleModal = document.querySelector('.modal-overlay[style*="flex"]');
+    if (visibleModal) {
+      const id = visibleModal.id.replace('modal-', '');
       closeModal(id);
-    });
+    }
   }
 });
 
-/* ── Close modal on overlay click ── */
+function getModalSequence() {
+  const buttons = Array.from(document.querySelectorAll('.wr-read-btn'));
+  return buttons.map(b => {
+    const oc = b.getAttribute('onclick');
+    const match = oc ? oc.match(/openModal\(['"]([^'"]+)['"]\)/) : null;
+    return match ? match[1] : null;
+  }).filter(Boolean);
+}
+
+function navigateModal(dir, currentId) {
+  const seq = getModalSequence();
+  const i = seq.indexOf(currentId);
+  if (i === -1) return;
+  
+  const nextIndex = dir === 'next' 
+    ? (i + 1) % seq.length 
+    : (i - 1 + seq.length) % seq.length;
+  
+  const nextId = seq[nextIndex];
+  if (!nextId || nextId === currentId) return;
+  
+  closeModal(currentId);
+  setTimeout(() => openModal(nextId), 350);
+}
+
+window.navigateModal = navigateModal;
+
 document.addEventListener('click', e => {
   if (e.target.classList.contains('modal-overlay')) {
     const id = e.target.id.replace('modal-', '');
@@ -194,7 +222,6 @@ document.addEventListener('click', e => {
   }
 });
 
-/* ── Init everything on load ── */
 window.addEventListener('DOMContentLoaded', () => {
   initLenis();
   pageIn();

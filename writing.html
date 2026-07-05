@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <title>Writing — Govind</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/writing.css">
 </head>
-<body>
+<body class="writing-page">
 
 <div id="page-cover"></div>
 
@@ -28,7 +31,7 @@
   <div class="page-hero reveal">
     <span class="eyebrow">Writing</span>
     <h1 class="page-hero-title">Poems, fiction,<br><em>and other confessions.</em></h1>
-    <p class="page-hero-sub">things I probably shouldn't publish</p>
+    <p class="page-hero-sub">things that I would have forgetten if left unsaid</p>
   </div>
 
   <div class="filter-row reveal">
@@ -40,7 +43,7 @@
 
   <div class="writing-list" id="writing-list">
 
-    <article class="writing-row reveal" data-type="poem" data-delay="0">
+    <article class="writing-row reveal" data-type="poem">
       <div class="wr-meta">
         <span class="wr-type poem-type">Poem</span>
         <span class="wr-year">2025</span>
@@ -52,7 +55,7 @@
       <button class="wr-read-btn" onclick="openModal('snow')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="fiction" data-delay="0.06">
+    <article class="writing-row reveal" data-type="fiction">
       <div class="wr-meta">
         <span class="wr-type fiction-type">Fiction</span>
         <span class="wr-year">2025</span>
@@ -64,7 +67,7 @@
       <button class="wr-read-btn" onclick="openModal('connor')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="poem" data-delay="0.12">
+    <article class="writing-row reveal" data-type="poem">
       <div class="wr-meta">
         <span class="wr-type poem-type">Poem</span>
         <span class="wr-year">2025</span>
@@ -76,7 +79,7 @@
       <button class="wr-read-btn" onclick="openModal('magical')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="poem" data-delay="0.24">
+    <article class="writing-row reveal" data-type="poem">
       <div class="wr-meta">
         <span class="wr-type poem-type">Poem</span>
         <span class="wr-year">2025</span>
@@ -88,7 +91,7 @@
       <button class="wr-read-btn" onclick="openModal('funerals')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="diary" data-delay="0.36">
+    <article class="writing-row reveal" data-type="diary">
       <div class="wr-meta">
         <span class="wr-type diary-type">Diary Entry</span>
         <span class="wr-year">2026</span>
@@ -100,7 +103,7 @@
       <button class="wr-read-btn" onclick="openModal('diary')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="poem" data-delay="0.42">
+    <article class="writing-row reveal" data-type="poem">
       <div class="wr-meta">
         <span class="wr-type poem-type">Poem</span>
         <span class="wr-year">2026</span>
@@ -112,7 +115,7 @@
       <button class="wr-read-btn" onclick="openModal('scar')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="poem" data-delay="0.48">
+    <article class="writing-row reveal" data-type="poem">
       <div class="wr-meta">
         <span class="wr-type poem-type">Poem</span>
         <span class="wr-year">2026</span>
@@ -124,7 +127,7 @@
       <button class="wr-read-btn" onclick="openModal('miranda')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="fiction" data-delay="0.54">
+    <article class="writing-row reveal" data-type="fiction">
       <div class="wr-meta">
         <span class="wr-type fiction-type">Creative Nonfiction</span>
         <span class="wr-year">2026</span>
@@ -136,7 +139,7 @@
       <button class="wr-read-btn" onclick="openModal('monkeys')">Read</button>
     </article>
 
-    <article class="writing-row reveal" data-type="poem" data-delay="0.6">
+    <article class="writing-row reveal" data-type="poem">
       <div class="wr-meta">
         <span class="wr-type poem-type">Poem</span>
         <span class="wr-year">2026</span>
@@ -151,44 +154,48 @@
   </div>
 </div>
 
-<!-- Modals -->
-<div class="modal-overlay" id="modal-connor" style="display:none">
+<button class="reader-nav reader-prev" id="reader-prev" onclick="navigateModal('prev', currentModalId)" aria-label="Previous piece" style="display:none;">‹</button>
+<button class="reader-nav reader-next" id="reader-next" onclick="navigateModal('next', currentModalId)" aria-label="Next piece" style="display:none;">›</button>
+
+<div class="modal-overlay" id="modal-snow">
   <div class="modal-box">
     <div class="modal-head">
-      <div>
-        <span class="wr-type fiction-type">Fiction</span>
-        <h2 class="modal-title">Connor and Diana</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('connor')">
+      <h2 class="modal-title">snow, death and happiness</h2>
+      <button class="modal-close" onclick="closeModal('snow')" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-content">
+      <p>The snow falling blissfully,<br>The cold breath is getting colder each moment,<br>The white floor is starting to get red slowly,<br>The floor gets colder than ever,<br>And a smile stretches on a cold face.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-connor">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2 class="modal-title">Connor and Diana</h2>
+      <button class="modal-close" onclick="closeModal('connor')" aria-label="Close modal">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="modal-content letter-content">
       <p>24 September 1939</p>
-      <br>
       <p>Dear Diana,</p>
-      <br>
       <p>Many of my friends were killed today. They died fighting them. They all tried to stop the enemy, but it wasn't enough. I tried too, I swear to God I did, but they terrified me. Every time I looked at them, I thought of you, Diana.</p>
-      <br>
       <p>I just couldn't leave you alone. I'm sorry, I was a coward. My family thinks I died alongside my friends; nobody knows that I ran away. I may still be breathing, but inside, I'm as lifeless as that chicken hanging in the butcher's shop. I'm too afraid to come back now. I can't face the families of the soldiers who died saving me while I ran away like a coward. I just can't, Diana.</p>
-      <br>
       <p>The purpose of this letter is to confess one last time: I love you. I always have, and I always will. I would've surely married you, but I wasn't brave enough. Today, I'm going to meet my friends again. I don't know if they'll accept me up there, but I can't bear living with myself any longer.</p>
-      <br>
       <p>I don't know if this message will ever reach you, but if it does, don't let it weigh on your heart.</p>
-      <br>
       <p>Your lover,<br>Connor</p>
     </div>
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-magical" style="display:none">
+<div class="modal-overlay" id="modal-magical">
   <div class="modal-box">
     <div class="modal-head">
-      <div>
-        <span class="wr-type poem-type">Poem</span>
-        <h2 class="modal-title">She was magical</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('magical')">
+      <h2 class="modal-title">She was magical</h2>
+      <button class="modal-close" onclick="closeModal('magical')" aria-label="Close modal">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
@@ -199,14 +206,11 @@
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-funerals" style="display:none">
+<div class="modal-overlay" id="modal-funerals">
   <div class="modal-box">
     <div class="modal-head">
-      <div>
-        <span class="wr-type poem-type">Poem</span>
-        <h2 class="modal-title">i've had several funerals</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('funerals')">
+      <h2 class="modal-title">i've had several funerals</h2>
+      <button class="modal-close" onclick="closeModal('funerals')" aria-label="Close modal">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
@@ -216,125 +220,89 @@
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-diary" style="display:none">
+<div class="modal-overlay" id="modal-diary">
   <div class="modal-box">
     <div class="modal-head">
-      <div>
-        <span class="wr-type diary-type">Diary Entry</span>
-        <h2 class="modal-title">Dear Diary</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('diary')">
+      <h2 class="modal-title">Dear Diary</h2>
+      <button class="modal-close" onclick="closeModal('diary')" aria-label="Close modal">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="modal-content letter-content">
       <p>17/05/2026</p>
       <p>Sunday</p>
-      <br>
       <p>Dear Diary,</p>
-      <br>
       <p>I wish to confess, to come clean, and to finally talk about something.</p>
-      <br>
       <p>I stutter.</p>
-      <br>
       <p>I know exactly what I want to say. I have repeated the same words to myself several times. The people in front of me are eagerly waiting, their faces displaying a mix of emotions. Most are understanding and patient, some are impatient and eager to move on, and a few are laughing. When I see those few, I feel scared and angry—not at them, but at myself, at my unruly tongue and mind.</p>
-      <br>
       <p>This has happened countless times. After each instance, my urge to speak, to tell my friends about my day, or even to answer a question, runs far away, to hide in the distant forest. I sometimes feel like one of the stranger creations of the one above. I think a lot, almost all the time, but I often choose not to give it those cruel words.</p>
-      <br>
-      <p>Maybe that’s why I like writing, on paper, on a screen, with my own comfort, no one in my head just shouting at me to speak clearly or quickly.</p>
-      <br>
-      <p>But recently, I’ve started to notice the people who were patient, who were understanding, who were with me through those weird pauses, who didn’t run away or make fun of me just because I spoke with a short delay.</p>
-      <br>
+      <p>Maybe that's why I like writing, on paper, on a screen, with my own comfort, no one in my head just shouting at me to speak clearly or quickly.</p>
+      <p>But recently, I've started to notice the people who were patient, who were understanding, who were with me through those weird pauses, who didn't run away or make fun of me just because I spoke with a short delay.</p>
       <p>And I know that I would be stuttering in the future too, and maybe I will always choose the ones who stayed, waited, and were kind enough to listen.</p>
-      <br>
       <p>Thank you for being one of the few who stayed.</p>
     </div>
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-scar" style="display:none">
+<div class="modal-overlay" id="modal-scar">
   <div class="modal-box">
     <div class="modal-head">
-      <div>
-        <span class="wr-type poem-type">Poem</span>
-        <h2 class="modal-title">Every Scar</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('scar')">
+      <h2 class="modal-title">Every Scar</h2>
+      <button class="modal-close" onclick="closeModal('scar')" aria-label="Close modal">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="modal-content">
       <p>Every scar on my cold, dry face,<br>Holds a beautiful memory.<br>They keep growing.<br>Finding homes on the flaky skin,<br>Farming a yellowish fluid.<br>The colony is yet to arrive,<br>to my lips, eyes, and heart.</p>
-      <br>
       <p>A Melancholic Coincidence:</p>
-      <br>
       <p>A constellation forms above the pretty sky,<br>Each faded star falls in my backyard.<br>I collect those diverse bodies for show.<br>The showcase shelf paints a portrait,<br>Of a familiar face, I saw the day I died.</p>
-      <br>
       <p>White Nights by Fyodor Dostoevsky, Starry Night by Vincent Van Gogh, Yeh Kagazi Phool Jaise Chehre by Mehdi Hassan, Pyaasa by Guru Dutt, and My Life.</p>
     </div>
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-miranda" style="display:none">
+<div class="modal-overlay" id="modal-miranda">
   <div class="modal-box">
     <div class="modal-head">
-      <div>
-        <span class="wr-type poem-type">Poem</span>
-        <h2 class="modal-title">Miranda</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('miranda')">
+      <h2 class="modal-title">Miranda</h2>
+      <button class="modal-close" onclick="closeModal('miranda')" aria-label="Close modal">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="modal-content">
       <p>Miranda<br>Cute, old, and very wise,<br>with brown, cold, and distant eyes.<br>She runs out of her small house,<br>trying to look for a little mouse.</p>
-      <br>
       <p>A mouse, like a son,<br>a pretty, cute one.</p>
-      <br>
       <p>Miranda<br>In a shining hot sun,<br>Having so much fun.<br>She walks her path,<br>like an otter for a bath.</p>
-      <br>
       <p>Miranda<br>finally greets the moon,<br>hoping to find him soon.<br>But the mouse is lost,<br>fleeing as a ghost.</p>
-      <br>
       <p>Miranda,<br>searches for her son,<br>a pretty, cute one.</p>
     </div>
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-monkeys" style="display:none">
+<div class="modal-overlay" id="modal-monkeys">
   <div class="modal-box">
     <div class="modal-head">
-      <div>
-        <span class="wr-type fiction-type">Creative Nonfiction</span>
-        <h2 class="modal-title">What the Monkeys Know</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('monkeys')">
+      <h2 class="modal-title">What the Monkeys Know</h2>
+      <button class="modal-close" onclick="closeModal('monkeys')" aria-label="Close modal">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="modal-content letter-content">
       <p><strong>Evening.</strong><br>They are here, yet again. A family of many—uninvited, yet united. The young ones jump and wrestle the way we used to. A tired mother walks slowly, her baby hugging her upside down. The big ones are stoic and rude. They are familiar.</p>
-      <br>
       <p><strong>Tuesday.</strong><br>I take off my chappal at the gate of the Hanuman Mandir. The continuous jingle of the temple bell, the thump of a worn-out tabla, and a melodious voice fill the air. I join the half-finished Chalisa, reciting along. The priest splashes a handful of cold water from his jug, then comes around and presses a bright orange chandan tika between my eyebrows. When I finally meet him—standing in all of his glory, carrying a mountain—he is, somehow, also kind.</p>
-      <br>
       <p><strong>Vrindavan.</strong><br>A tourist's sunglasses disappear, now resting in the grasp of a small grey fist. Locals come in as translators, informing her about the huge demand for Frooti. She agrees. A man from the crowd throws the Frooti up into the air, and with perfect fairness, a pair of sunglasses comes down.</p>
-      <br>
       <p><strong>Morning,</strong><br>every morning, for almost a month.<br>A grey and pink hand taps gently at my window. The curtain hides a child. He chatters as if he has something urgent to say. His tongue lolls out as soon as he sees the banana on my desk. I open the window—I always open the window. After a bit of small talk, he gets his breakfast.</p>
-      <br>
       <p><strong>One day,</strong><br>He stopped coming.<br>My eyes were open, waiting to get up after that delicate knock.</p>
-      <br>
       <p><strong>Yesterday.</strong><br>A big guy—one of the rude ones—on my balcony, in an unusual area. He barely moved, just sat there with his back to me. His back was bulky, with yellow hair poking out, some tangled, drawing an odd image. I watched him long enough that the image started to make sense. Then, abruptly, he moved on. I kept looking, hoping to catch a glimpse of his eyes.</p>
     </div>
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-burial" style="display:none">
+<div class="modal-overlay" id="modal-burial">
   <div class="modal-box">
     <div class="modal-head">
-      <div>
-        <span class="wr-type poem-type">Poem</span>
-        <h2 class="modal-title">Burial</h2>
-      </div>
-      <button class="modal-close" onclick="closeModal('burial')">
+      <h2 class="modal-title">Burial</h2>
+      <button class="modal-close" onclick="closeModal('burial')" aria-label="Close modal">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
@@ -350,6 +318,8 @@
 <script>gsap.registerPlugin(ScrollTrigger);</script>
 <script src="js/main.js"></script>
 <script>
+  let currentModalId = null;
+
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -357,10 +327,22 @@
       const f = btn.dataset.filter;
       document.querySelectorAll('.writing-row').forEach(row => {
         const show = f === 'all' || row.dataset.type === f;
-        gsap.to(row, { opacity: show ? 1 : 0.2, duration: 0.3 });
+        gsap.to(row, { opacity: show ? 1 : 0.15, duration: 0.3 });
         row.style.pointerEvents = show ? '' : 'none';
       });
     });
+  });
+
+  document.getElementById('reader-prev').addEventListener('click', function() {
+    if (currentModalId) {
+      navigateModal('prev', currentModalId);
+    }
+  });
+
+  document.getElementById('reader-next').addEventListener('click', function() {
+    if (currentModalId) {
+      navigateModal('next', currentModalId);
+    }
   });
 </script>
 </body>
