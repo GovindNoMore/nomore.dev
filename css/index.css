@@ -123,7 +123,7 @@
   min-height: 260px;
 }
 
-/* ---- Photo wall: scattered polaroid gallery ---- */
+/* ---- Photo wall: landscape polaroid gallery (UPDATED) ---- */
 .photo-wall {
   margin: 3rem auto 4rem;
   text-align: center;
@@ -136,15 +136,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 2.4rem 2rem;
-  max-width: 980px;
+  gap: 2rem 2rem;
+  max-width: 1200px;            /* slightly wider to accommodate larger cards */
   margin: 0 auto;
 }
 
 .polaroid {
   background: #fdfdfb;
-  width: 190px;
-  padding: 12px 12px 18px;
+  width: 260px;                  /* increased from 240px */
+  padding: 10px 10px 16px;       /* thinner frame: reduced padding */
   border-radius: 3px;
   box-shadow: 0 8px 20px rgba(16, 36, 43, 0.28);
   transform: rotate(var(--rot, 0deg));
@@ -161,7 +161,7 @@
 
 .polaroid-photo {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 2;          /* landscape ratio */
   overflow: hidden;
   background: var(--bg-warm);
 }
@@ -175,14 +175,13 @@
 .polaroid-caption {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #333;
   text-align: center;
   line-height: 1.35;
-  margin-top: 10px;
+  margin-top: 8px;              /* slightly reduced to match thinner frame */
   padding: 0 2px;
 }
-
 /* ---- Footer ---- */
 .footer-note {
   font-family: var(--serif);
@@ -223,6 +222,7 @@
 @media (max-width: 768px) {
   .cta-badge { font-size: 0.72rem; padding: 8px 14px; top: 12px; right: 12px; }
   .footer-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
-  .polaroid { width: 140px; padding: 9px 9px 14px; }
+  .polaroid { width: 180px; padding: 10px 10px 15px; }
   .polaroid-grid { gap: 1.8rem 1.2rem; }
+  .polaroid-caption { font-size: 0.7rem; }
 }

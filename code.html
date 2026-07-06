@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/code.css">
 </head>
-<body>
+<body class="code-page">
 
 <div id="page-cover"></div>
 
@@ -25,50 +25,94 @@
 
 <div class="container">
 
-  <div class="page-hero reveal">
-    <span class="eyebrow">Code</span>
-    <h1 class="page-hero-title">Things I've built while<br><em>procrastinating.</em></h1>
+  <div class="projects-hero reveal">
+    <h1>Projects</h1>
+    <p>Things I've built — and some still brewing.</p>
   </div>
 
-  <section class="featured-section reveal">
-    <span class="eyebrow">Featured</span>
-    <div class="featured-card">
-      <div class="terminal-wrap">
+  <section class="proj-section reveal">
+    <div class="proj-grid">
+
+      <!-- RiverLens -->
+      <div class="proj-card reveal" data-delay="0" onclick="openModal('riverlens')" tabindex="0" role="button" aria-label="Open RiverLens details">
         <div class="terminal-bar">
           <div class="term-dots">
             <div class="term-dot r"></div>
             <div class="term-dot y"></div>
             <div class="term-dot g"></div>
           </div>
-          <span class="terminal-filename">featured_project.sh</span>
+          <span class="terminal-filename">riverlens.sh</span>
         </div>
-        <div class="terminal-body featured-body">
-          <div class="feat-meta">
-            <span class="eyebrow" style="color:#c9d1d9">MusicScope</span>
-            <h2 class="feat-title">Music taste analyser</h2>
-            <p class="feat-desc">A web application that analyses your listening habits and provides insights into your music taste. Built with modern web technologies and a passion for data visualisation.</p>
-            <div class="feat-tags">
-              <span class="ftag">React</span>
-              <span class="ftag">JavaScript</span>
-              <span class="ftag">Spotify API</span>
-              <span class="ftag">Chart.js</span>
-            </div>
-            <div class="feat-links">
-              <a href="https://music-scope-alpha.vercel.app/" target="_blank" class="feat-link feat-link-primary">Live Demo</a>
-              <a href="https://github.com/GovindNoMore" target="_blank" class="feat-link">Source Code</a>
-            </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">RiverLens</h3>
+          <p class="proj-card-sub">Interactive data visualization platform for tracking and mapping river water quality.</p>
+          <div class="proj-card-tags">
+            <span class="ptag">Next.js</span>
+            <span class="ptag">React</span>
+            <span class="ptag">TypeScript</span>
+            <span class="ptag">Supabase</span>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-status active-badge">Active</span>
+            <span class="proj-card-hint">open ▸</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <hr class="rule reveal">
+      <!-- nomore.dev -->
+      <div class="proj-card reveal" data-delay="0.08" onclick="openModal('nomoredev')" tabindex="0" role="button" aria-label="Open nomore.dev details">
+        <div class="terminal-bar">
+          <div class="term-dots">
+            <div class="term-dot r"></div>
+            <div class="term-dot y"></div>
+            <div class="term-dot g"></div>
+          </div>
+          <span class="terminal-filename">nomore.dev.sh</span>
+        </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">nomore.dev</h3>
+          <p class="proj-card-sub">Centralized digital portfolio and custom developer hub showcasing my projects and experiments.</p>
+          <div class="proj-card-tags">
+            <span class="ptag">Vite</span>
+            <span class="ptag">React</span>
+            <span class="ptag">TypeScript</span>
+            <span class="ptag">UI/UX</span>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-status active-badge">Active</span>
+            <span class="proj-card-hint">open ▸</span>
+          </div>
+        </div>
+      </div>
 
-  <section class="featured-section reveal">
-    <span class="eyebrow">Project 02</span>
-    <div class="featured-card">
-      <div class="terminal-wrap">
+      <!-- MusicScope -->
+      <div class="proj-card reveal" data-delay="0.16" onclick="openModal('musicscope')" tabindex="0" role="button" aria-label="Open MusicScope details">
+        <div class="terminal-bar">
+          <div class="term-dots">
+            <div class="term-dot r"></div>
+            <div class="term-dot y"></div>
+            <div class="term-dot g"></div>
+          </div>
+          <span class="terminal-filename">musicscope.sh</span>
+        </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">MusicScope</h3>
+          <p class="proj-card-sub">Dynamic web application for audio exploration, track analysis, and composition workflows.</p>
+          <div class="proj-card-tags">
+            <span class="ptag">Express</span>
+            <span class="ptag">React</span>
+            <span class="ptag">State Mgmt</span>
+            <span class="ptag">API</span>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-status active-badge">Active</span>
+            <span class="proj-card-hint">open ▸</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Study Desk -->
+      <div class="proj-card reveal" data-delay="0.24" onclick="openModal('studydesk')" tabindex="0" role="button" aria-label="Open Study Desk details">
         <div class="terminal-bar">
           <div class="term-dots">
             <div class="term-dot r"></div>
@@ -77,132 +121,44 @@
           </div>
           <span class="terminal-filename">studydesk.sh</span>
         </div>
-        <div class="terminal-body featured-body">
-          <div class="feat-meta">
-            <span class="eyebrow" style="color:#c9d1d9">Study Desk</span>
-            <h2 class="feat-title">Personal study dashboard</h2>
-            <p class="feat-desc">A real desktop app built with Electron. Track your syllabus, lectures, tasks, homework deadlines, and study sessions — all in one place. Pure black minimal design.</p>
-            <div class="feat-tags">
-              <span class="ftag">Electron</span>
-              <span class="ftag">Node.js</span>
-              <span class="ftag">JavaScript</span>
-              <span class="ftag">CSS</span>
-            </div>
-            <div class="feat-links">
-              <a href="https://github.com/GovindNoMore/studydesk" target="_blank" class="feat-link feat-link-primary">Source Code</a>
-            </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Study Desk</h3>
+          <p class="proj-card-sub">Productivity and resource-management app for streamlined academic organization.</p>
+          <div class="proj-card-tags">
+            <span class="ptag">Next.js</span>
+            <span class="ptag">Supabase</span>
+            <span class="ptag">Auth</span>
+            <span class="ptag">Real‑time</span>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-status active-badge">Active</span>
+            <span class="proj-card-hint">open ▸</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <hr class="rule reveal">
-
-  <section class="featured-section reveal">
-    <span class="eyebrow">Project 03</span>
-    <div class="featured-card">
-      <div class="terminal-wrap">
+      <!-- Coming Soon (placeholder left as is) -->
+      <div class="proj-card reveal" data-delay="0.32" onclick="openModal('comingsoon')" tabindex="0" role="button" aria-label="Open Coming Soon details">
         <div class="terminal-bar">
           <div class="term-dots">
             <div class="term-dot r"></div>
             <div class="term-dot y"></div>
             <div class="term-dot g"></div>
           </div>
-          <span class="terminal-filename">portfolio.sh</span>
+          <span class="terminal-filename">coming-soon.sh</span>
         </div>
-        <div class="terminal-body featured-body">
-          <div class="feat-meta">
-            <span class="eyebrow" style="color:#c9d1d9">nomore.dev -Portfolio </span>
-            <h2 class="feat-title">This website</h2>
-            <p class="feat-desc">The portfolio you are looking at right now. An organic editorial-themed personal site with GSAP animations, Lenis smooth scroll, page transitions, and a terminal typewriter intro.</p>
-            <div class="feat-tags">
-              <span class="ftag">HTML</span>
-              <span class="ftag">CSS</span>
-              <span class="ftag">JavaScript</span>
-              <span class="ftag">GSAP</span>
-              <span class="ftag">Lenis</span>
-            </div>
-            <div class="feat-links">
-              <a href="https://github.com/GovindNoMore/nomore.dev" target="_blank" class="feat-link feat-link-primary">Source Code</a>
-            </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Coming Soon</h3>
+          <p class="proj-card-sub">Something involving music, code, and coffee. I'm still drawing the blueprints.</p>
+          <div class="proj-card-tags">
+            <span class="ptag">???</span>
+            <span class="ptag">Coffee</span>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-status planning-badge">Planning</span>
+            <span class="proj-card-hint">open ▸</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="rule reveal">
-
-  <section class="projects-section reveal">
-    <span class="eyebrow">All Projects</span>
-    <div class="projects-list">
-
-      <div class="project-row reveal" data-delay="0">
-        <div class="project-row-left">
-          <span class="proj-num">01</span>
-          <div class="proj-info">
-            <span class="proj-title">MusicScope</span>
-            <span class="proj-sub">Music taste analyser — React + Spotify API</span>
-          </div>
-        </div>
-        <div class="proj-tags">
-          <span class="ptag">React</span>
-          <span class="ptag">JS</span>
-          <span class="ptag">API</span>
-        </div>
-        <div class="proj-status active-badge">Active</div>
-        <a href="https://music-scope-alpha.vercel.app/" target="_blank" class="proj-link">View</a>
-      </div>
-
-      <div class="project-row reveal" data-delay="0.08">
-        <div class="project-row-left">
-          <span class="proj-num">02</span>
-          <div class="proj-info">
-            <span class="proj-title">Study Desk</span>
-            <span class="proj-sub">Personal study dashboard — Electron desktop app</span>
-          </div>
-        </div>
-        <div class="proj-tags">
-          <span class="ptag">Electron</span>
-          <span class="ptag">Node.js</span>
-          <span class="ptag">JS</span>
-        </div>
-        <div class="proj-status active-badge">Active</div>
-        <a href="https://github.com/GovindNoMore/studydesk" target="_blank" class="proj-link">View</a>
-      </div>
-
-      <div class="project-row reveal" data-delay="0.16">
-        <div class="project-row-left">
-          <span class="proj-num">03</span>
-          <div class="proj-info">
-            <span class="proj-title">About Me Portfolio</span>
-            <span class="proj-sub">This website — HTML, CSS, JS, GSAP</span>
-          </div>
-        </div>
-        <div class="proj-tags">
-          <span class="ptag">HTML</span>
-          <span class="ptag">CSS</span>
-          <span class="ptag">GSAP</span>
-        </div>
-        <div class="proj-status active-badge">Active</div>
-        <a href="YOUR_GITHUB_REPO_URL" target="_blank" class="proj-link">View</a>
-      </div>
-
-      <div class="project-row reveal" data-delay="0.24">
-        <div class="project-row-left">
-          <span class="proj-num">04</span>
-          <div class="proj-info">
-            <span class="proj-title">Coming Soon</span>
-            <span class="proj-sub">Something involving music, code, and coffee</span>
-          </div>
-        </div>
-        <div class="proj-tags">
-          <span class="ptag">???</span>
-          <span class="ptag">Coffee</span>
-        </div>
-        <div class="proj-status planning-badge">Planning</div>
-        <span class="proj-link disabled-link">TBA</span>
       </div>
 
     </div>
@@ -210,6 +166,210 @@
 
   <hr class="rule reveal">
 
+  <!-- ── Project detail modals ── -->
+
+  <!-- RiverLens modal -->
+  <div class="modal-overlay project-modal" id="modal-riverlens">
+    <div class="modal-box project-modal-box">
+      <div class="pm-header">
+        <div class="term-dots">
+          <div class="term-dot r"></div>
+          <div class="term-dot y"></div>
+          <div class="term-dot g"></div>
+        </div>
+        <span class="terminal-filename">riverlens.sh</span>
+        <button class="pm-close" onclick="closeModal('riverlens')" aria-label="Close">×</button>
+      </div>
+      <div class="pm-content">
+        <h2 class="pm-title">RiverLens</h2>
+        <div class="pm-section">
+          <span class="pm-section-title">$ about</span>
+          <p>An interactive data visualization platform engineered to track, map, and analyze river water quality metrics.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ why</span>
+          <p>To tackle environmental data fragmentation. I wanted to build a tool that takes raw, complex ecological data and transforms it into an accessible, highly visual format that provides immediate, actionable insights into water conditions.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ stack</span>
+          <div class="feat-tags">
+            <span class="ftag">Next.js</span>
+            <span class="ftag">React</span>
+            <span class="ftag">TypeScript</span>
+            <span class="ftag">Supabase</span>
+          </div>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ repo</span>
+          <div class="feat-links">
+            <a href="https://github.com/GovindNoMore/RiverLens" target="_blank" class="feat-link feat-link-primary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- nomore.dev modal -->
+  <div class="modal-overlay project-modal" id="modal-nomoredev">
+    <div class="modal-box project-modal-box">
+      <div class="pm-header">
+        <div class="term-dots">
+          <div class="term-dot r"></div>
+          <div class="term-dot y"></div>
+          <div class="term-dot g"></div>
+        </div>
+        <span class="terminal-filename">nomore.dev.sh</span>
+        <button class="pm-close" onclick="closeModal('nomoredev')" aria-label="Close">×</button>
+      </div>
+      <div class="pm-content">
+        <h2 class="pm-title">nomore.dev</h2>
+        <div class="pm-section">
+          <span class="pm-section-title">$ about</span>
+          <p>A centralized digital portfolio and custom developer hub showcasing my technical projects, software architecture, and experimental builds.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ why</span>
+          <p>To move beyond standard templates and engineer a custom digital presence from scratch. It serves as a central repository for my work and a live demonstration of my frontend optimization skills.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ stack</span>
+          <div class="feat-tags">
+            <span class="ftag">Vite</span>
+            <span class="ftag">React</span>
+            <span class="ftag">TypeScript</span>
+            <span class="ftag">UI/UX</span>
+          </div>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ repo</span>
+          <div class="feat-links">
+            <a href="https://github.com/GovindNoMore/nomore.dev" target="_blank" class="feat-link feat-link-primary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MusicScope modal -->
+  <div class="modal-overlay project-modal" id="modal-musicscope">
+    <div class="modal-box project-modal-box">
+      <div class="pm-header">
+        <div class="term-dots">
+          <div class="term-dot r"></div>
+          <div class="term-dot y"></div>
+          <div class="term-dot g"></div>
+        </div>
+        <span class="terminal-filename">musicscope.sh</span>
+        <button class="pm-close" onclick="closeModal('musicscope')" aria-label="Close">×</button>
+      </div>
+      <div class="pm-content">
+        <h2 class="pm-title">MusicScope</h2>
+        <div class="pm-section">
+          <span class="pm-section-title">$ about</span>
+          <p>A dynamic web application tailored for audio exploration, track analysis, and musical composition workflows.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ why</span>
+          <p>To bridge the gap between technical development and musical composition. I wanted to create an intuitive platform that makes exploring audio structures, managing track data, and analyzing music highly interactive and seamless.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ stack</span>
+          <div class="feat-tags">
+            <span class="ftag">Express</span>
+            <span class="ftag">React</span>
+            <span class="ftag">State Management</span>
+            <span class="ftag">API</span>
+          </div>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ repo</span>
+          <div class="feat-links">
+            <a href="https://github.com/GovindNoMore/musicscope" target="_blank" class="feat-link feat-link-primary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Study Desk modal -->
+  <div class="modal-overlay project-modal" id="modal-studydesk">
+    <div class="modal-box project-modal-box">
+      <div class="pm-header">
+        <div class="term-dots">
+          <div class="term-dot r"></div>
+          <div class="term-dot y"></div>
+          <div class="term-dot g"></div>
+        </div>
+        <span class="terminal-filename">studydesk.sh</span>
+        <button class="pm-close" onclick="closeModal('studydesk')" aria-label="Close">×</button>
+      </div>
+      <div class="pm-content">
+        <h2 class="pm-title">Study Desk</h2>
+        <div class="pm-section">
+          <span class="pm-section-title">$ about</span>
+          <p>A comprehensive productivity and resource-management application designed to streamline academic organization and intensive study workflows.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ why</span>
+          <p>To engineer a solution for rigorous academic schedules. The goal was to build an optimized, distraction-free environment for tracking progress, managing analytical problem-solving sessions, and organizing resources efficiently.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ stack</span>
+          <div class="feat-tags">
+            <span class="ftag">Next.js</span>
+            <span class="ftag">Supabase</span>
+            <span class="ftag">Authentication</span>
+            <span class="ftag">Real‑time Sync</span>
+          </div>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ repo</span>
+          <div class="feat-links">
+            <a href="https://github.com/GovindNoMore/studydesk" target="_blank" class="feat-link feat-link-primary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coming Soon modal (unchanged) -->
+  <div class="modal-overlay project-modal" id="modal-comingsoon">
+    <div class="modal-box project-modal-box">
+      <div class="pm-header">
+        <div class="term-dots">
+          <div class="term-dot r"></div>
+          <div class="term-dot y"></div>
+          <div class="term-dot g"></div>
+        </div>
+        <span class="terminal-filename">coming-soon.sh</span>
+        <button class="pm-close" onclick="closeModal('comingsoon')" aria-label="Close">×</button>
+      </div>
+      <div class="pm-content">
+        <h2 class="pm-title">Coming Soon</h2>
+        <div class="pm-section">
+          <span class="pm-section-title">$ about</span>
+          <p>Something involving music, code, and coffee. I'm still drawing the blueprints.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ why</span>
+          <p>This one's still marinating. Check back soon.</p>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ stack</span>
+          <div class="feat-tags">
+            <span class="ftag">???</span>
+            <span class="ftag">Coffee</span>
+          </div>
+        </div>
+        <div class="pm-section">
+          <span class="pm-section-title">$ repo</span>
+          <p class="pm-placeholder">[ TBA ]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom terminal status -->
   <div class="terminal-wrap reveal code-footer-term">
     <div class="terminal-bar">
       <div class="term-dots">
