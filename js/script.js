@@ -15,7 +15,8 @@ Here are some fun facts about me:
 - i rarely study but when i do i get good grades (not really but let's pretend)
 
 ==SYSTEM READY==
-Welcome to my digital space.
+Welcome
+This is an ode to the ART i create.
 `;
 
 const typedText = document.getElementById('typed-text');
